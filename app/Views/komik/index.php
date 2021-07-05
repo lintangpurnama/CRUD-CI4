@@ -16,13 +16,15 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php $i=1;?>
+                    <?php foreach ($komik as $k):?>
                     <tr>
-                        <th scope="row">1</th>
-                        <td><img src="/img/tes.png" alt="" class ="sampul"></td>
-                        <td>Otto</td>
+                        <th scope="row"><?= $i++;?></th>
+                        <td><img src="/img/<?= $k['sampul'];?>" alt="" class ="sampul"></td>
+                        <td><?= $k['judul']; ?></td>
                         <td><button type="button" class="btn btn-primary">Primary</button></td>
                     </tr>
-
+                        <?php endforeach;?>
                 </tbody>
             </table>
         </div>
